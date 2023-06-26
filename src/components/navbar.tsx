@@ -24,8 +24,13 @@ const Navbar = () => {
         />
       </div>
       <div className="flex flex-grow basis-0  flex-row items-start justify-end gap-6 ">
-        <select name="Courses" id=" " className="px-4 py-2 text-gray-400">
-          <option value="" disabled selected hidden>
+        <select
+          defaultValue={"Courses"}
+          name="Courses"
+          id=" "
+          className="px-4 py-2 text-gray-400"
+        >
+          <option value="Default" disabled hidden>
             Courses
           </option>
           <option value="Frontend">Frontend</option>

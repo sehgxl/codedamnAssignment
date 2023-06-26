@@ -30,7 +30,7 @@ const HomepageDashboard: FunctionComponent<{ user: userType }> = ({ user }) => {
         />
       </div>
       {resume ? (
-        <iframe src={user.resume} className="mt-10 min-h-screen w-full" />
+        <iframe src={`${user.resume}`} className="mt-10 min-h-screen w-full" />
       ) : (
         <>
           <Stats user={user} />
