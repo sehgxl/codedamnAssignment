@@ -45,16 +45,24 @@ const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
 
         <div className="flex flex-row justify-between pt-16">
           <div className="flex flex-row gap-4">
-            <Link target="_blank" passHref={true} href={user?.socials?.github}>
+            <Link
+              target="_blank"
+              passHref={true}
+              href={user?.socials?.github ?? ""}
+            >
               <Image className="h-6 w-6" alt="githubIcon" src={githubIcon} />
             </Link>
-            <Link target="_blank" passHref={true} href={user?.socials?.twitter}>
+            <Link
+              target="_blank"
+              passHref={true}
+              href={user?.socials?.twitter ?? ""}
+            >
               <Image className="h-7 w-7" alt="twitterIcon" src={twitterIcon} />
             </Link>
             <Link
               target="_blank"
               passHref={true}
-              href={user?.socials?.linkedin}
+              href={user?.socials?.linkedin ?? ""}
             >
               <Image
                 className="h-7 w-7"
@@ -62,7 +70,11 @@ const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
                 src={linkedinIcon}
               />
             </Link>
-            <Link target="_blank" passHref={true} href={user?.socials?.youtube}>
+            <Link
+              target="_blank"
+              passHref={true}
+              href={user?.socials?.youtube ?? ""}
+            >
               <Image className="h-7 w-7" alt="youtubeIcon" src={youtubeIcon} />
             </Link>
           </div>

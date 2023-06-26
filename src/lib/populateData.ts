@@ -105,5 +105,8 @@ export default function populateData() {
       },
     ],
   };
-  localStorage.setItem("user", JSON.stringify(user));
+
+  if (typeof window !== "undefined") {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 }
