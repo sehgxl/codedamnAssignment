@@ -21,7 +21,7 @@ const Playgrounds: FunctionComponent<{ user: userType }> = ({ user }) => {
       </div>
       <div className="mt-8 grid grid-cols-2 grid-rows-2 gap-5 ">
         {user?.playgrounds.map((playground, index) => {
-          return (
+          return playground.active ? (
             <div key={index} className="flex flex-row items-start gap-3 p-4">
               <Image
                 className="h-12 w-12"
@@ -71,7 +71,7 @@ const Playgrounds: FunctionComponent<{ user: userType }> = ({ user }) => {
                 </div>
               </div>
             </div>
-          );
+          ) : null;
         })}
       </div>
     </section>

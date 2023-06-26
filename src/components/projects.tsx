@@ -3,6 +3,7 @@ import SecondaryBtn from "./secondaryBtn";
 import Image from "next/image";
 import project1 from "../public/project1.png";
 import reactIcon from "../public/react.svg";
+import emptyProjectIcon from "../public/emptyProject.svg";
 const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
   return (
     <section className="flex flex-col gap-10 pt-10">
@@ -18,7 +19,7 @@ const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
       </div>
       <div className="grid grid-cols-2 grid-rows-2 gap-5 border-2">
         {user?.projects.map((project, index) => {
-          return (
+          return project.active ? (
             <div key={index} className="flex flex-col border-2 p-4">
               <Image
                 className=" h-full w-full"
@@ -36,6 +37,16 @@ const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
                   );
                 })}
               </div>
+            </div>
+          ) : (
+            <div key={index} className="flex flex-col border-2 p-4">
+              <Image
+                className=" h-full w-full"
+                alt="ProjectIcon"
+                src={emptyProjectIcon}
+              />
+              <h1 className="pt-5 text-2xl font-bold">Project title</h1>
+              <div className="text-md flex flex-row gap-6 pt-2"></div>
             </div>
           );
         })}

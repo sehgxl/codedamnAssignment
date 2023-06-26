@@ -6,7 +6,7 @@ import Projects from "./projects";
 import Playgrounds from "./playground";
 import Certificates from "./certificates";
 
-const ProfileDashboard: FunctionComponent<{ user: userType }> = ({ user }) => {
+const HomepageDashboard: FunctionComponent<{ user: userType }> = ({ user }) => {
   const [portfolio, setPorfolio] = useState(true);
   const [resume, setResume] = useState(false);
   return (
@@ -29,12 +29,18 @@ const ProfileDashboard: FunctionComponent<{ user: userType }> = ({ user }) => {
           state={resume}
         />
       </div>
-      <Stats user={user} />
-      <Projects user={user} />
-      <Playgrounds user={user} />
-      <Certificates user={user} />
+      {resume ? (
+        <iframe src={user.resume} className="mt-10 min-h-screen w-full" />
+      ) : (
+        <>
+          <Stats user={user} />
+          <Projects user={user} />
+          <Playgrounds user={user} />
+          <Certificates user={user} />
+        </>
+      )}
     </section>
   );
 };
 
-export default ProfileDashboard;
+export default HomepageDashboard;

@@ -1,18 +1,17 @@
 "use client";
-import setData from "@/lib/setData";
+import popuplateData from "@/lib/populateData";
 import editIcon from "../public/editIcon.svg";
-import ProfileHero from "./profileHero";
+import HomepageHero from "./homepageHero";
 import Image from "next/image";
+import HomepageDashboard from "./homepageDashboard";
 
-import ProfileDashboard from "./profileDashboard";
-import { useEffect } from "react";
 const Homepage = () => {
-  setData();
-  // useEffect(setData, []);
   let user;
   const getuserData = localStorage.getItem("user");
   if (getuserData !== null) {
     user = JSON.parse(getuserData);
+  } else {
+    popuplateData();
   }
   return (
     <section className="relative mx-48  mb-32 mt-16  rounded-lg border-2 bg-gradient-to-r from-blue-500 to-pink-500 pt-36">
@@ -21,8 +20,8 @@ const Homepage = () => {
         <span>Edit Cover</span>
       </button>
       <section className="bg-white">
-        <ProfileHero user={user} />
-        <ProfileDashboard user={user} />
+        <HomepageHero user={user} />
+        <HomepageDashboard user={user} />
       </section>
     </section>
   );

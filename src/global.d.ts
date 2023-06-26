@@ -1,5 +1,14 @@
 type userType = {
   name: string;
+  dob: Date;
+  socials: {
+    [k: string]: string;
+  };
+  resume: string;
+  followActive: boolean;
+  followers: numeber;
+  following: number;
+  gender: string;
   subscription: string;
   jobStatus: string;
   about: string;
@@ -27,3 +36,5 @@ type userType = {
     issueDate: string;
   }[];
 };
+
+declare module "*.pdf";

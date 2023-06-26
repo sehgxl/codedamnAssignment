@@ -8,7 +8,8 @@ import locationIcon from "../public/locationIcon.svg";
 import bookmarkIcon from "../public/bookmarkIcon.svg";
 import PrimaryBtn from "./primaryBtn";
 import { FunctionComponent } from "react";
-const ProfileHero: FunctionComponent<{ user: userType }> = ({ user }) => {
+import Link from "next/link";
+const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
   return (
     <section className="relative">
       <Image
@@ -24,6 +25,9 @@ const ProfileHero: FunctionComponent<{ user: userType }> = ({ user }) => {
           </span>
           <span className=" font-bold text-sky-800">{user?.jobStatus}</span>
         </div>
+        {user?.followActive ? (
+          <p className="text-md text-start font-semibold">{`Followers : ${user?.followers} Following : ${user?.following}`}</p>
+        ) : null}
         <p className="text-gray-500">{user?.about}</p>
         <div className="flex flex-row gap-2">
           <Image alt="locationIcon" src={locationIcon} />
@@ -41,26 +45,26 @@ const ProfileHero: FunctionComponent<{ user: userType }> = ({ user }) => {
 
         <div className="flex flex-row justify-between pt-16">
           <div className="flex flex-row gap-4">
-            <Image
-              className="h-6 w-6"
-              alt="githubIcon"
-              src={githubIcon}
-            ></Image>
-            <Image
-              className="h-7 w-7"
-              alt="twitterIcon"
-              src={twitterIcon}
-            ></Image>
-            <Image
-              className="h-7 w-7"
-              alt="linkedinIcon"
-              src={linkedinIcon}
-            ></Image>
-            <Image
-              className="h-7 w-7"
-              alt="youtubeIcon"
-              src={youtubeIcon}
-            ></Image>
+            <Link target="_blank" passHref={true} href={user?.socials?.github}>
+              <Image className="h-6 w-6" alt="githubIcon" src={githubIcon} />
+            </Link>
+            <Link target="_blank" passHref={true} href={user?.socials?.twitter}>
+              <Image className="h-7 w-7" alt="twitterIcon" src={twitterIcon} />
+            </Link>
+            <Link
+              target="_blank"
+              passHref={true}
+              href={user?.socials?.linkedin}
+            >
+              <Image
+                className="h-7 w-7"
+                alt="linkedinIcon"
+                src={linkedinIcon}
+              />
+            </Link>
+            <Link target="_blank" passHref={true} href={user?.socials?.youtube}>
+              <Image className="h-7 w-7" alt="youtubeIcon" src={youtubeIcon} />
+            </Link>
           </div>
           <div className="flex flex-row items-center gap-5">
             <Image className="" alt="bookmarkIcon" src={bookmarkIcon} />
@@ -72,4 +76,4 @@ const ProfileHero: FunctionComponent<{ user: userType }> = ({ user }) => {
   );
 };
 
-export default ProfileHero;
+export default HomepageHero;
