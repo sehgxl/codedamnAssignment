@@ -104,6 +104,7 @@ export default function populateData() {
         issueDate: "Dec 8, 2022",
       },
     ],
+    populateFlag: true,
   };
 
   if (typeof window !== "undefined") {

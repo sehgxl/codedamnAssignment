@@ -35,6 +35,7 @@ type userType = {
     title: string;
     issueDate: string;
   }[];
+  populateFlag: boolean;
 };
 
 declare module "*.pdf";

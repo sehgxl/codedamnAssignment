@@ -4,15 +4,18 @@ import editIcon from "../public/editIcon.svg";
 import HomepageHero from "./homepageHero";
 import Image from "next/image";
 import HomepageDashboard from "./homepageDashboard";
-
+import { useState } from "react";
 const Homepage = () => {
+  const [populate, setPopuplate] = useState(false);
   let user;
   if (typeof window !== "undefined") {
     const getuserData = localStorage.getItem("user");
+    console.log(getuserData);
     if (getuserData !== null) {
       user = JSON.parse(getuserData);
     } else {
       popuplateData();
+      setPopuplate(true);
     }
   }
 
