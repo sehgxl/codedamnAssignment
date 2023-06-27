@@ -24,10 +24,10 @@ const ProjectsEdit: FunctionComponent<{ user: userType }> = ({ user }) => {
         }}
         id="projectForm"
       >
-        <div className="grid grid-cols-1 grid-rows-4 gap-5 border-2 lg:grid-cols-2 lg:grid-rows-2">
+        <div className="grid grid-cols-1 grid-rows-4 gap-5  lg:grid-cols-2 lg:grid-rows-2">
           {user?.projects.map((project, index) => {
             return (
-              <div key={index} className="flex flex-col border-2 p-4">
+              <div key={index} className="flex flex-col  p-4">
                 <Image
                   className=" h-full w-full"
                   alt="ProjectIcon"

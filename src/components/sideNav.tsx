@@ -11,7 +11,7 @@ const SideNav = () => {
     Resume: false,
   });
   return (
-    <div className=" flex basis-1/3 flex-col gap-6 border-2  p-6">
+    <div className=" flex basis-1/3 flex-col gap-6   p-6">
       <Link href="/Profile">
         <div
           onClick={() =>
@@ -29,7 +29,7 @@ const SideNav = () => {
             selectedButton.Profile
               ? "border-l-4 border-l-black text-black"
               : "text-gray-500"
-          } flex flex-row items-center justify-start gap-2 border-2  px-3 py-1  `}
+          } flex flex-row items-center justify-start gap-2  px-3 py-1  `}
         >
           <Image
             className={`${selectedButton.Profile ? null : "opacity-60"}`}
@@ -57,7 +57,7 @@ const SideNav = () => {
             selectedButton.Socials
               ? "border-l-4 border-l-black text-black"
               : "text-gray-500"
-          } flex flex-row items-center justify-start gap-2 border-2  px-3 py-1  `}
+          } flex flex-row items-center justify-start gap-2   px-3 py-1  `}
         >
           <Image
             className={`${selectedButton.Socials ? null : "opacity-60"}`}
@@ -85,7 +85,7 @@ const SideNav = () => {
             selectedButton.Portfolio
               ? "border-l-4 border-l-black text-black"
               : "text-gray-500"
-          } flex flex-row items-center justify-start gap-2 border-2  px-3 py-1  `}
+          } flex flex-row items-center justify-start gap-2  px-3 py-1  `}
         >
           <Image
             className={`${selectedButton.Portfolio ? null : "opacity-60"}`}
@@ -113,7 +113,7 @@ const SideNav = () => {
             selectedButton.Resume
               ? "border-l-4 border-l-black text-black"
               : "text-gray-500"
-          } flex flex-row items-center justify-start gap-2 border-2  px-3 py-1  `}
+          } flex flex-row items-center justify-start gap-2  px-3 py-1  `}
         >
           <Image
             className={`${selectedButton.Resume ? null : "opacity-60"}`}

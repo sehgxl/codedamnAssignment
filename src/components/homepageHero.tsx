@@ -17,7 +17,7 @@ const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
         alt="Profile Photo"
         src={ProfilePhoto}
       />
-      <div className="flex flex-col gap-2 border-2 px-4 pt-28 sm:pl-48 sm:pt-6 ">
+      <div className="flex flex-col gap-2  px-4 pt-28 sm:pl-48 sm:pt-6 ">
         <div className="flex flex-col items-start gap-3  lg:flex-row lg:items-center">
           <h1 className=" text-3xl font-bold ">{user?.name}</h1>
           <span className=" rounded-md bg-lime-300 p-1 px-2 text-sm md:text-base">

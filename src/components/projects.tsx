@@ -39,7 +39,7 @@ const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
               </div>
             </div>
           ) : (
-            <div key={index} className="flex flex-col border-2 p-4">
+            <div key={index} className="flex flex-col  p-4">
               <Image
                 className=" h-full w-full"
                 alt="ProjectIcon"
