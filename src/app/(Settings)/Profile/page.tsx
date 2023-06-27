@@ -21,7 +21,7 @@ export default function Profile() {
           src={profileIcon}
           className="h-20 w-20 rounded-full"
         />
-        <div className="flex  flex-row items-center gap-3">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
           <PrimaryBtn btnText="Upload new picture" />
           <button className="px-4 py-2 hover:text-red-600">Delete</button>
         </div>
@@ -141,7 +141,7 @@ export default function Profile() {
             <SwitchToggle enabled={showFollower} setEnabled={setShowFollower} />
           </div>
         </div>
-        <div className="flex flex-row items-center  justify-end gap-3">
+        <div className="flex flex-col items-start justify-end gap-3  sm:flex-row sm:items-center">
           <button className="px-4 py-2 hover:text-red-600">Cancel</button>
           <input
             className="cursor-pointer rounded-lg bg-violet-600 px-4 py-2 text-lg font-medium text-white"

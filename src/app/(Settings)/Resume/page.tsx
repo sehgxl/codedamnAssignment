@@ -27,7 +27,7 @@ export default function Resume() {
           />
         </div>
       </form>
-      <div className="flex flex-row items-center  justify-end gap-3">
+      <div className="flex  flex-col items-start justify-end gap-3  sm:flex-row sm:items-center">
         <button className="px-4 py-2 hover:text-red-600">Cancel</button>
         <input
           className="cursor-pointer rounded-lg bg-violet-600 px-4 py-2 text-lg font-medium text-white"
