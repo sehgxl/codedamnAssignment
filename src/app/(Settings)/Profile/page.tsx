@@ -15,18 +15,18 @@ export default function Profile() {
 
   return (
     <section className=" basis-2/3  ">
-      <div className="mt-10 flex flex-row gap-6">
+      <div className="mt-10 flex flex-col gap-6 md:flex-row">
         <Image
           alt="profileIcon"
           src={profileIcon}
           className="h-20 w-20 rounded-full"
         />
-        <div className="flex flex-row items-center gap-3">
+        <div className="flex  flex-row items-center gap-3">
           <PrimaryBtn btnText="Upload new picture" />
           <button className="px-4 py-2 hover:text-red-600">Delete</button>
         </div>
       </div>
-      <h1 className="mt-10 basis-2/5 text-2xl font-bold">
+      <h1 className="mt-10 text-xl font-bold sm:text-2xl">
         Your Basic Information
       </h1>
       <form
@@ -124,14 +124,16 @@ export default function Profile() {
       </form>
 
       <section className="mt-10 flex flex-col">
-        <h1 className="  text-2xl font-bold">Section visibility</h1>
+        <h1 className=" text-xl font-bold sm:text-2xl">Section visibility</h1>
         <p className="text-md mt-1 text-gray-500">
           Select which sections and content should show on your profile page.
         </p>
-        <div className="mt-6 flex flex-col p-6">
-          <div className="flex flex-row items-center justify-between">
+        <div className="mt-3 flex flex-col p-3 md:mt-6 md:p-6">
+          <div className="flex flex-col  items-start justify-between gap-4 lg:flex-row lg:items-center">
             <div className="gal-1 flex flex-col">
-              <h1 className=" text-xl font-bold">Followers and following</h1>
+              <h1 className="text-lg font-bold sm:text-xl">
+                Followers and following
+              </h1>
               <p className="text-md mt-1 text-gray-500">
                 Shows your followers and the users you follow on codedamn
               </p>

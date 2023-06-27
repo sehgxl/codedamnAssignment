@@ -7,7 +7,7 @@ import emptyProjectIcon from "../public/emptyProject.svg";
 const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
   return (
     <section className="flex flex-col gap-10 pt-10">
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <h1 className="text-3xl font-bold">Projects</h1>
         <SecondaryBtn
           state={true}
@@ -17,10 +17,10 @@ const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
           btnText="Create New Project"
         />
       </div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-5 border-2">
+      <div className="grid grid-cols-1 grid-rows-4  gap-5 lg:grid-cols-2 lg:grid-rows-2">
         {user?.projects.map((project, index) => {
           return project.active ? (
-            <div key={index} className="flex flex-col border-2 p-4">
+            <div key={index} className="flex flex-col p-4">
               <Image
                 className=" h-full w-full"
                 alt="ProjectIcon"

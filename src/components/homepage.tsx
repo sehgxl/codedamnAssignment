@@ -20,7 +20,7 @@ const Homepage = () => {
   }
 
   return (
-    <section className="relative mx-48  mb-32 mt-16  rounded-lg border-2 bg-gradient-to-r from-blue-500 to-pink-500 pt-36">
+    <section className="relative mx-6 mb-32  mt-16 rounded-lg  border-2 bg-gradient-to-r from-blue-500 to-pink-500 pt-36 sm:mx-28 lg:mx-48">
       <button className=" absolute right-6 top-5 flex flex-row items-center gap-1 rounded-lg border-2 border-white bg-pink-400 px-2 py-1 font-semibold text-white">
         <Image alt="editIcon" src={editIcon} />
         <span>Edit Cover</span>

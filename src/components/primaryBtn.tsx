@@ -5,7 +5,7 @@ const PrimaryBtn: FunctionComponent<{
 }> = (props) => {
   const btnText = props.btnText;
   return (
-    <button className=" rounded-lg bg-violet-600 px-4 py-2 text-lg font-medium text-white">
+    <button className=" sm:base rounded-lg bg-violet-600 px-4 py-2 font-medium text-white sm:text-lg">
       {btnText}
     </button>
   );

@@ -8,7 +8,7 @@ const Stats: FunctionComponent<{ user: userType }> = ({ user }) => {
   return (
     <section className="0 flex flex-col pt-10">
       <h1 className=" text-3xl font-bold ">Stats</h1>
-      <div className=" grid grid-cols-2 grid-rows-2 gap-5 px-5 pt-6">
+      <div className=" grid grid-cols-1 grid-rows-4 gap-5 px-1 pt-6 sm:grid-cols-2 sm:grid-rows-2 sm:px-5">
         <div className="flex items-center">
           <Image className=" " alt="LightningIcon" src={Lightning} />
           <div className="flex flex-col gap-2">

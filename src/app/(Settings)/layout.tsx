@@ -6,7 +6,7 @@ export default function sideNavLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mx-24 my-16 flex flex-row gap-20">
+    <section className="mx-1 mt-8 flex  flex-row  sm:mx-10 sm:gap-4 lg:mx-20 lg:my-16 lg:gap-10">
       <SideNav />
       {children}
     </section>

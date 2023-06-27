@@ -13,22 +13,24 @@ const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
   return (
     <section className="relative">
       <Image
-        className=" absolute -top-16  left-6 z-10 h-40 w-40 rounded-full border-4 border-white "
+        className=" absolute  -top-16 left-6 z-10 max-h-40 rounded-full border-4 border-white "
         alt="Profile Photo"
         src={ProfilePhoto}
       />
-      <div className="ml-48 flex flex-col gap-2 border-2  px-4 pt-6 ">
-        <div className="flex flex-row items-center gap-3">
+      <div className="flex flex-col gap-2 border-2 px-4 pt-28 sm:pl-48 sm:pt-6 ">
+        <div className="flex flex-col items-start gap-3  lg:flex-row lg:items-center">
           <h1 className=" text-3xl font-bold ">{user?.name}</h1>
-          <span className=" rounded-md bg-lime-300 p-1 px-2">
+          <span className=" rounded-md bg-lime-300 p-1 px-2 text-sm md:text-base">
             {user?.subscription}
           </span>
-          <span className=" font-bold text-sky-800">{user?.jobStatus}</span>
+          <span className=" text-sm font-bold text-sky-800 md:text-base">
+            {user?.jobStatus}
+          </span>
         </div>
         {user?.followActive ? (
-          <p className="text-md text-start font-semibold">{`Followers : ${user?.followers} Following : ${user?.following}`}</p>
+          <p className="md:text-md text-start font-semibold ">{`Followers : ${user?.followers} Following : ${user?.following}`}</p>
         ) : null}
-        <p className="text-gray-500">{user?.about}</p>
+        <p className="text-gray-500 ">{user?.about}</p>
         <div className="flex flex-row gap-2">
           <Image alt="locationIcon" src={locationIcon} />
           <p className="text-gray-400">{user?.location}</p>
@@ -43,7 +45,7 @@ const HomepageHero: FunctionComponent<{ user: userType }> = ({ user }) => {
           })}
         </div>
 
-        <div className="flex flex-row justify-between pt-16">
+        <div className="flex flex-col justify-between gap-8 pt-16 sm:flex-row">
           <div className="flex flex-row gap-4">
             <Link
               target="_blank"
