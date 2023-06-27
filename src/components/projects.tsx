@@ -9,13 +9,7 @@ const Projects: FunctionComponent<{ user: userType }> = ({ user }) => {
     <section className="flex flex-col gap-10 pt-10">
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <h1 className="text-3xl font-bold">Projects</h1>
-        <SecondaryBtn
-          state={true}
-          handleClick={() => {
-            console.log("Abhinav");
-          }}
-          btnText="Create New Project"
-        />
+        <SecondaryBtn state={true} btnText="Create New Project" />
       </div>
       <div className="grid grid-cols-1 grid-rows-4  gap-5 lg:grid-cols-2 lg:grid-rows-2">
         {user?.projects.map((project, index) => {

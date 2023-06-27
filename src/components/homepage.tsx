@@ -10,7 +10,6 @@ const Homepage = () => {
   let user;
   if (typeof window !== "undefined") {
     const getuserData = localStorage.getItem("user");
-    console.log(getuserData);
     if (getuserData !== null) {
       user = JSON.parse(getuserData);
     } else {

@@ -11,13 +11,7 @@ const Playgrounds: FunctionComponent<{ user: userType }> = ({ user }) => {
     <section className="flex flex-col pt-6">
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <h1 className="text-3xl font-bold">Playgrounds</h1>
-        <SecondaryBtn
-          state={true}
-          handleClick={() => {
-            console.log("Abhinav");
-          }}
-          btnText="Create New Playground"
-        />
+        <SecondaryBtn state={true} btnText="Create New Playground" />
       </div>
       <div className="mt-8 grid grid-cols-1 grid-rows-4  gap-5 lg:grid-cols-2 lg:grid-rows-2  ">
         {user?.playgrounds.map((playground, index) => {

@@ -9,13 +9,7 @@ const ProjectsEdit: FunctionComponent<{ user: userType }> = ({ user }) => {
     <section className="flex flex-col gap-10 pt-10">
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <h1 className="text-3xl font-bold">Projects</h1>
-        <SecondaryBtn
-          state={true}
-          handleClick={() => {
-            console.log("Abhinav");
-          }}
-          btnText="See all"
-        />
+        <SecondaryBtn state={true} btnText="See all" />
       </div>
 
       <form
@@ -55,7 +49,7 @@ const ProjectsEdit: FunctionComponent<{ user: userType }> = ({ user }) => {
                   </button>
                 ) : (
                   <button
-                    className="mt-3 w-min rounded-md  bg-green-500 px-3 py-1 text-sm text-white"
+                    className="mt-3 w-min rounded-md  bg-violet-600 px-3 py-1 text-sm text-white"
                     onClick={() => {
                       project.active = true;
                     }}
